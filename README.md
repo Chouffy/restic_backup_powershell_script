@@ -53,5 +53,9 @@ Example: `sudo pwsh ./function_update_CLI_call.ps1 "/opt/restic/restic" "/opt/rc
 1. Set-up `common_windows.ps1` or `common_unix.ps1` with the path to `restic` and `rclone`.
     1. You can download [restic](https://github.com/restic/restic/releases) and [rclone](https://github.com/rclone/rclone/releases) here, and put the binaries in a fixed folder like `/opt/`
 1. Set-up `config_template.ps1` for your own configuration
+    1. Set up backup source, target, password, …
+    1. Set up [HealthChecks.io](https://healthchecks.io/) `UUID` to monitor backup state and receive logs
+        1. 3 Checks are required, one for each `restic` phase
+        1. Suggested naming convention for each Check: `restic ClientName BackupSource 1-backup`, `… 2-forget`, `… 3-check`
 1. Call `_main_script.ps1 </path/to/config/folder> <config_name.ps1>`
 1. Set up `cron` and be happy!
