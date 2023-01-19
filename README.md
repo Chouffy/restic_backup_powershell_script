@@ -43,12 +43,15 @@ Example: `sudo pwsh ./function_update_CLI_call.ps1 "/opt/restic/restic" "/opt/rc
 
 ## Setup
 
+1. `git clone` this repository
 1. Create `log/` folder which MUST be in the same folder than the main script
 1. Rename and/or move the `config_templates/` to build your own `config/` folder.
     1. The config folder MUST contain `common.ps1`
     1. The config folder MUST contain `common_windows.ps1` or `common_linux.ps1`
     1. The config folder MUST contain the script that will be called in `$BackupConfigName`
-1. Set-up `config_template.ps1` for your own configuration
 1. If you use `rclone`, set-up `common.ps1` with either `rclone.conf` or environment variables for your own configuration
+1. Set-up `common_windows.ps1` or `common_unix.ps1` with the path to `restic` and `rclone`.
+    1. You can download [restic](https://github.com/restic/restic/releases) and [rclone](https://github.com/rclone/rclone/releases) here, and put the binaries in a fixed folder like `/opt/`
+1. Set-up `config_template.ps1` for your own configuration
 1. Call `_main_script.ps1 </path/to/config/folder> <config_name.ps1>`
 1. Set up `cron` and be happy!
