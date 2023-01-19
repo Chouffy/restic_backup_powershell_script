@@ -30,11 +30,13 @@ Example: `./_main_script.ps1 "/home/restic/config" "config_template.ps1"`
 ### `_environment_initialize_CLI_call.ps1`
 
 Can be used when the user needs a `restic` environment to do other actions.
+
 Example: `. ./environment_initialize_CLI_call.ps1 ./config/ config_template.ps1; restic stats`
 
 ### `_function_update_CLI_call.ps1`
 
-Can be used to start self-update of `restic` and `rclone`.  
+Can be used to start self-update of `restic` and `rclone`.
+
 Example: `sudo pwsh ./function_update_CLI_call.ps1 "/opt/restic/restic" "/opt/rclone/rclone"`
 
 ## Setup
