@@ -7,6 +7,7 @@ Goals:
 - Only one script to maintain different systems and OSes (Windows and Linux)
 - Do a basic `restic` housekeeping: `backup`, `forget`, `check`
     - `prune` is absent as this should be a supervised activity
+    - `unlock` is also absent for the same reason - the backup WILL fail if there's a stall lock
 - Avoid backup on metered connection (Windows only)
 - One dashboard overview via [HealthChecks.io](https://healthchecks.io/)
 - Simple enough, so I can understand what's going on
