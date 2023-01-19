@@ -7,6 +7,7 @@ Goals:
 - Only one script to maintain different systems and OSes (Windows and Linux)
 - One dashboard overview via [HealthChecks.io](https://healthchecks.io/)
 - Avoid backup on metered connection (Windows only)
+- Do a basic `restic` housekeeping: backup, forget, check
 - Simple enough, so I can understand what's going on
 
 Beware that I'm not a PowerShell expert, I've learned along the way.  
