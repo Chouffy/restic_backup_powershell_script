@@ -9,12 +9,8 @@ Goals:
 - Avoid backup on metered connection (Windows only)
 - Simple enough, so I can understand what's going on
 
-Tested on:
-
-- Windows 10
-- Windows 11
-- Raspberry Pi OS
-- Ubuntu Server
+Beware that I'm not a PowerShell expert, I've learned along the way.  
+I've tested this set of script with PowerShell 7.3 on Windows 10/11, Raspberry Pi OS and Ubuntu Server.
 
 ## Overview of user scrips
 
@@ -43,6 +39,7 @@ Example: `sudo pwsh ./function_update_CLI_call.ps1 "/opt/restic/restic" "/opt/rc
 
 ## Setup
 
+1. Have PowerShell installed: built-in on Windows, [see here](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux) on Linux
 1. `git clone` this repository
 1. Create `log/` folder which MUST be in the same folder than the main script
 1. Rename and/or move the `config_templates/` to build your own `config/` folder.
