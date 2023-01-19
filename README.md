@@ -5,7 +5,8 @@ This set of scripts allow the user to launch periodically [restic](https://resti
 Goals:
 
 - Only one script to maintain different systems and OSes (Windows and Linux)
-- Do a basic `restic` housekeeping: backup, forget, check
+- Do a basic `restic` housekeeping: `backup`, `forget`, `check`
+    - `prune` is absent as this should be a supervised activity
 - Avoid backup on metered connection (Windows only)
 - One dashboard overview via [HealthChecks.io](https://healthchecks.io/)
 - Simple enough, so I can understand what's going on
