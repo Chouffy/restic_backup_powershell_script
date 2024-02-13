@@ -10,6 +10,7 @@
 # Restic Backup parameters
 $ResticBackupTag = "automated-backup"
 $ResticExcludeIfPresent = ".backupignore"
+$ResticExcludeFile = Join-Path $PSScriptRoot "excludes.txt"
 $ResticDryRun = $False
 
 # Restic Forget parameters - See https://restic.readthedocs.io/en/stable/060_forget.html#removing-snapshots-according-to-a-policy

@@ -1,0 +1,2 @@
+# Example of directory pattern to avoid
+AppData\Local\Temp\
