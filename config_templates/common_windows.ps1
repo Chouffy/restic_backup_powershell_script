@@ -15,8 +15,12 @@ $AutoUpdateApps = $True
 $ResticLocation = "C:\Restic"
 
 # Restic Backup parameters
-$ResticUseFSSnapshot = $True
-
+# Check if current session is elevated
+If (([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+   $ResticUseFSSnapshot = $True
+} else {
+   $ResticUseFSSnapshot = $False
+}
 
 # ----------------------
 # RCLONE CONFIG
